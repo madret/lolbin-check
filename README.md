@@ -2,7 +2,7 @@
 Quick check if a list of executables contains potential living of the land binaries (and scripts == lolbas).
 
 ### Instructions:
-- Generate a text file containing numerous executable files and/or scripts,
+- Generate a input text file containing numerous executable files and/or scripts,
 - Edit the PS script to have the right path to the database and text input file,
 - Run script.
 
