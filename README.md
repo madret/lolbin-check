@@ -3,7 +3,7 @@ Quick check if a list of executables contains potential living of the land binar
 
 ### Instructions:
 - Generate a input text file containing numerous executable files and/or scripts,
-- Edit the PS script to have the right path to the database and text input file,
+- Edit the PS script to have the right path to the database.csv and text input file,
 - Run script.
 
 ### Example output:
