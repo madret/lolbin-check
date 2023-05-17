@@ -6,20 +6,16 @@ $inputPath = "C:\path\to\executables.txt"
 
 # Read CSV into array of strings
 $csvLines = Get-Content $csvPath
-
-# Define hashtable to store the data from the CSV
 $csvData = @{}
 
-# Loop through each line
 foreach ($line in $csvLines) {
-    # Split
     $values = $line.Split(",")
     
     # Add the values to the hashtable using the first column as the key to lowercase
     $csvData[$values[0].ToLower()] = $values[1]
 }
 
-# Read the input file into an array of strings
+# Read input file
 $lines = Get-Content $inputPath
 
 # ANSI color codes 
@@ -39,10 +35,8 @@ foreach ($line in $lines) {
         if ($lowerWord.EndsWith(".exe")) {
             # Check if the process is in the hashtable converted to lowercase
             if ($csvData.ContainsKey($lowerWord)) {
-                # Extra info
                 $extraInfo = "$blue https://lolbas-project.github.io/lolbas/Binaries/" + ($word -replace '\.exe$','') + "/$reset"
                 
-                # Print function
                 Write-Output "$($green)$word$($reset) is a LOLBIN. Additional information, double click and browse: $extraInfo"
             }
         }
